@@ -1,0 +1,48 @@
+<div class="vehicle-container">
+    <h2 class="title">LISTA DE VEHICULOS</h2>
+    <div class="button-group">
+      <button class="btn export">Exportar</button>
+      <button class="btn add">Agregar Usuario</button>
+    </div>
+  
+    <table class="vehicle-table">
+      <thead>
+        <tr>
+          <th>Estado de vehiculo</th>
+          <th>Color</th>
+          <th>Año</th>
+          <th>Foto</th>
+          <th>Marca</th>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Cantidad de asientos</th>
+          <th>Combustible</th>
+          <th>Tipo</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let vehicle of vehicleList">
+  <td>{{ vehicle.vehicleStatus }}</td>
+  <td>{{ vehicle.color }}</td>
+  <td>{{ vehicle.year }}</td>
+  <td>{{ vehicle.vehiclePhoto }}</td>
+  <td>{{ vehicle.brand }}</td>
+  <td>{{ vehicle.licensePlate }}</td>
+  <td>{{ vehicle.model }}</td>
+  <td>{{ vehicle.seatCount }}</td>
+  <td>{{ vehicle.fuelType }}</td>
+  <td>{{ vehicle.vehicleType }}</td>
+  <td>{{ vehicle.registrationDate | date:'short' }}</td>
+  <td class="actions">
+    <i class="fas fa-eye"></i>
+    <i class="fas fa-edit"></i>
+    <i class="fas fa-trash-alt"></i>
+  </td>
+</tr>
+
+
+      </tbody>
+    </table>
+  </div>
+  
